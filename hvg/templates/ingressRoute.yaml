@@ -6,7 +6,7 @@ metadata:
 spec:
   entryPoints:
   - web
-  - websecure
+  - websecure:
       address: ':3030'
   routes:
   - kind: Rule
