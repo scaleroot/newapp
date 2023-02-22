@@ -9,7 +9,7 @@ spec:
   - websecure
   routes:
   - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/hvg`)
+    match: Host(`{{ .Values.ingressroute.host }}`) 
     services:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 3030
