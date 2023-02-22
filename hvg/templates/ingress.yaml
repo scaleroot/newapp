@@ -16,7 +16,7 @@ spec:
             name: hello-kubernetes-hvg
             port:
               name: http
-  - host: example.com
+  - host: hvgnewapp.newcross-sbx.com
     http:
       paths:
       - path: /
