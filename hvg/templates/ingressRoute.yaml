@@ -15,7 +15,7 @@ spec:
       port: 443
       scheme: http
   - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`) 
+    match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/hvg`)
     services:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 3030
