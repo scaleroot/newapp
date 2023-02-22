@@ -5,11 +5,11 @@ message: ""
 ingress:
   configured: false
   rewritePath: true
-  pathPrefix: ""
+  pathPrefix: "/hvg"
 
 service:
   type: LoadBalancer
-  port: 80
+  port: 3030
 cert:
   name: hvgnewapp.newcross-sbx.com
   namespace: app
