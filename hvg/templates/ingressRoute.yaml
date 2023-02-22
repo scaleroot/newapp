@@ -14,11 +14,5 @@ spec:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 3030
       scheme: http
-  - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`) 
-    services:
-    - name: {{ include "hello-kubernetes.name" . }}
-      port: 443
-      scheme: https
   tls:
     secretName: {{ .Values.cert.secretname }}
