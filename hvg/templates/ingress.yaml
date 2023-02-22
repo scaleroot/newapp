@@ -26,4 +26,7 @@ spec:
             name: hello-kubernetes-hvg
             port:
               name: https
-  
+tls:
+- hosts:
+  - hvgnewapp.newcross-sbx.com
+  secretName: newapp-tls
