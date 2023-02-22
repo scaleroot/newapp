@@ -11,7 +11,7 @@ spec:
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`)
     services:
-    - name: {{ include "helm-example.fullname" . }}
+    - name: {{ include "hello-kubernetes.name" . }}
       port: 3030
   tls:
     secretName: {{ .Values.cert.secretname }}
