@@ -6,8 +6,7 @@ metadata:
 spec:
   entryPoints:
   - web
-  - websecure:
-      address: ':3030'
+  - websecure
   routes:
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) 
