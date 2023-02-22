@@ -1,1 +1,17 @@
-
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ .Values.ingressroute.name }}
+  namespace: {{ .Values.cert.namespace }}
+spec:
+  entryPoints:
+  - web
+  - websecure
+  routes:
+  - kind: Rule
+    match: Host(`{{ .Values.ingressroute.host }}`)
+    services:
+    - name: {{ include "helm-example.fullname" . }}
+      port: 3030
+  tls:
+    secretName: {{ .Values.cert.secretname }}
