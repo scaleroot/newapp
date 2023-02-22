@@ -13,5 +13,7 @@ spec:
     services:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 3030
+    - name: second-svc
+      port: 3031
   tls:
     secretName: {{ .Values.cert.secretname }}
