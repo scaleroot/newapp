@@ -14,7 +14,7 @@ spec:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 3030
   - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`) && && PathPrefix(`/second-svc`)
+    match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/second-svc`)
     services:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 3031
