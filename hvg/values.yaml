@@ -3,7 +3,7 @@ message: ""
 
 # Remember to set service.type=ClusterIP if you are using an ingress
 ingress:
-  configured: false
+  enabled: true
   rewritePath: true
   pathPrefix: "/hvg"
 
