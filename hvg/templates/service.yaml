@@ -11,9 +11,11 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: 3030
-      targetPort: http
-      protocol: TCP
-      name: http
+    - name: http
+      port: 3030
+      targetPort: 3030
+    - name: https
+      port: 443
+      targetPort: 443
   selector:
     {{- include "hello-kubernetes.selectorLabels" . | nindent 4 }}
