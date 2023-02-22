@@ -10,6 +10,15 @@ ingress:
 service:
   type: LoadBalancer
   port: 80
+cert:
+  name: hvgnewapp.newcross-sbx.com
+  namespace: app
+  secretname: hvgnewapp.newcross-sbx.com
+  dnsname: hvgnewapp.newcross-sbx.com
+
+ingressroute:
+  name: nginxappn-tls
+  host: hvgnewapp.newcross-sbx.com
 
 deployment:
   replicaCount: 2
