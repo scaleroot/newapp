@@ -9,10 +9,10 @@ spec:
   - websecure
   routes:
   - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`)
+    match: Host(`{{ .Values.ingressroute.host }}`) 
     services:
     - name: {{ include "hello-kubernetes.name" . }}
-      port: 3030
+      port: 443
       scheme: http
   tls:
     secretName: {{ .Values.cert.secretname }}
