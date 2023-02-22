@@ -20,6 +20,6 @@ spec:
       name: https
     - port: 3031
       targetPort: http
-      name: https
+      name: httpsa
   selector:
     {{- include "hello-kubernetes.selectorLabels" . | nindent 4 }}
