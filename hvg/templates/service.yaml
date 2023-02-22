@@ -15,5 +15,8 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    - port: 443
+      targetPort: 8443
+      name: https
   selector:
     {{- include "hello-kubernetes.selectorLabels" . | nindent 4 }}
