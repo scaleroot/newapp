@@ -17,7 +17,7 @@ cert:
   dnsname: hvgnewapp.newcross-sbx.com
 
 ingressroute:
-  name: nginxappn-tls
+  name: ingressRoute
   host: hvgnewapp.newcross-sbx.com
 
 deployment:
