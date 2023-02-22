@@ -12,6 +12,6 @@ spec:
     match: Host(`{{ .Values.ingressroute.host }}`)
     services:
     - name: {{ include "hello-kubernetes.name" . }}
-      port: 3031
+      port: 3030
   tls:
     secretName: {{ .Values.cert.secretname }}
