@@ -16,7 +16,7 @@ spec:
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) && && PathPrefix(`/second-svc`)
     services:
-    - name: second-svc
+    - name: {{ include "hello-kubernetes.name" . }}
       port: 3031
   tls:
     secretName: {{ .Values.cert.secretname }}
