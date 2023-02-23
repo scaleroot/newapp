@@ -18,7 +18,7 @@ spec:
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
     services:
     - name: apple-service
-      port: http
+      port: htt
       scheme: http
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/banana`)
