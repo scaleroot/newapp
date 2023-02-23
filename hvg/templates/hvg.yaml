@@ -24,7 +24,7 @@ spec:
   ports:
     - port: 3031 # Default port for image
       protocol: TCP
-      targetPort: 3031
+      targetPort: http
 ---
 kind: Pod
 apiVersion: v1
@@ -53,5 +53,5 @@ spec:
   ports:
     - port: 3032 # Default port for image
       protocol: TCP
-      targetPort: 3032
+      targetPort: http
 
