@@ -1,3 +1,4 @@
+---
 kind: Pod
 apiVersion: v1
 metadata:
@@ -10,9 +11,7 @@ spec:
       image: hashicorp/http-echo
       args:
         - "-text=apple"
-
 ---
-
 kind: Service
 apiVersion: v1
 metadata:
@@ -37,7 +36,6 @@ spec:
         - "-text=banana"
 
 ---
-
 kind: Service
 apiVersion: v1
 metadata:
