@@ -16,7 +16,7 @@ spec:
 #       protocol: TCP
 #       name: http
     - port: 3031
-      targetPort: 443
+      targetPort: http
       protocol: TCP
       name: https
   selector:
