@@ -10,7 +10,7 @@ spec:
   - hvg
   routes:
   - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}:hvg`)
+    match: Host(`{{ .Values.ingressroute.host }}/hvg`)
     services:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 3031
