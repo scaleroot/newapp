@@ -9,6 +9,6 @@ metadata:
 spec:
   containers:
   - name: apple-app
-    image: 128230169866.dkr.ecr.eu-west-1.amazonaws.com/test:latest
+    image: public.ecr.aws/l0z3e7h5/test:latest
     args:
         - "-text=apple"
