@@ -24,13 +24,13 @@ spec:
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
     services:
     - name: apple-service
-      port: 3031
+      port: 5678
       scheme: http
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/banana`)
     services:
     - name: apple-service
-      port: 3032
+      port: 5679
       scheme: http
   tls:
     secretName: {{ .Values.cert.secretname }}
