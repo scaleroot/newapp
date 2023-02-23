@@ -13,18 +13,15 @@ spec:
     services:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 443
-      scheme: http
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
     services:
     - name: apple-service
       port: htt
-      scheme: http
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/banana`)
     services:
     - name: banana-service
       port: own
-      scheme: http
   tls:
     secretName: {{ .Values.cert.secretname }}
