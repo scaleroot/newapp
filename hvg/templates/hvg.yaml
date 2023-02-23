@@ -22,7 +22,7 @@ spec:
   selector:
     app: apple
   ports:
-    - port: 3032 # Default port for image
+    - port: 3031 # Default port for image
       targetPort: 5678
       name: http
 #     - port: 443 # Default port for image
