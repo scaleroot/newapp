@@ -20,5 +20,11 @@ spec:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 3030
       scheme: http
+  - kind: Rule
+    match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
+    services:
+    - name: apple-service
+      port: 5678
+      scheme: http
   tls:
     secretName: {{ .Values.cert.secretname }}
