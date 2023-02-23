@@ -30,7 +30,7 @@ spec:
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/banana`)
     services:
     - name: banana-service
-      port: 5678
+      port: own
       scheme: http
   tls:
     secretName: {{ .Values.cert.secretname }}
