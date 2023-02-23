@@ -22,7 +22,7 @@ spec:
   selector:
     app: apple
   ports:
-    - port: 80 # Default port for image
+    - port: 5678 # Default port for image
       protocol: TCP
       targetPort: 5678
 ---
@@ -51,7 +51,7 @@ spec:
   selector:
     app: banana
   ports:
-    - port: 80 # Default port for image
+    - port: 5678 # Default port for image
       protocol: TCP
       targetPort: 5678
 
