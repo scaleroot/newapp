@@ -7,7 +7,7 @@ spec:
   entryPoints:
   - web
   - websecure
-  - apple-service
+  - "3031"
   routes:
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) 
