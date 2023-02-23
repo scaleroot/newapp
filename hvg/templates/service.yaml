@@ -11,7 +11,7 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
+    - port: 3031
       targetPort: http
       protocol: TCP
       name: http
