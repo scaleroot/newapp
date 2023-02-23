@@ -24,6 +24,7 @@ spec:
   ports:
     - port: 3030 # Default port for image
       targetPort: 5678
+      name: http
 ---
 kind: Pod
 apiVersion: v1
