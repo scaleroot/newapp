@@ -1,12 +1,10 @@
 apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRouteTCP
+kind: IngressRoute
 metadata:
   name: {{ .Values.ingressroute.name }}
   namespace: {{ .Values.cert.namespace }}
 spec:
   entryPoints:
-  - web
-  - websecure
   - hvg
   routes:
   - kind: Rule
