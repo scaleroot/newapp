@@ -14,23 +14,23 @@ spec:
     - name: {{ include "hello-kubernetes.name" . }}
       port: 443
       scheme: http
-  - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/hvg`)
-    services:
-    - name: {{ include "hello-kubernetes.name" . }}
-      port: 3030
-      scheme: http
+#   - kind: Rule
+#     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/hvg`)
+#     services:
+#     - name: {{ include "hello-kubernetes.name" . }}
+#       port: 3030
+#       scheme: http
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
     services:
     - name: apple-service
-      port: 5678
+      port: 3031
       scheme: http
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/banana`)
     services:
     - name: apple-service
-      port: 5678
+      port: 3032
       scheme: http
   tls:
     secretName: {{ .Values.cert.secretname }}
