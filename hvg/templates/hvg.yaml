@@ -22,7 +22,7 @@ spec:
   selector:
     app: apple
   ports:
-    - port: 5678 # Default port for image
+    - port: 3031 # Default port for image
       protocol: TCP
       targetPort: 3031
 ---
