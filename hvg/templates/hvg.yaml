@@ -54,7 +54,7 @@ spec:
   selector:
     app: banana
   ports:
-    - port: 3031 # Default port for image
+    - port: 3032 # Default port for image
       targetPort: 5678
       name: own
 
