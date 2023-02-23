@@ -23,8 +23,6 @@ spec:
     app: apple
   ports:
     - port: 3031 # Default port for image
-      protocol: TCP
-      targetPort: 3031
 ---
 kind: Pod
 apiVersion: v1
