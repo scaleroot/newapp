@@ -22,7 +22,7 @@ spec:
   selector:
     app: apple
   ports:
-    - port: 3031 # Default port for image
+    - port: 3030 # Default port for image
 ---
 kind: Pod
 apiVersion: v1
