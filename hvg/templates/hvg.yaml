@@ -1,6 +1,6 @@
 ---
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: apple-app
   labels:
@@ -12,8 +12,8 @@ spec:
       args:
         - "-text=apple"
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: apple-service
 spec:
@@ -22,8 +22,8 @@ spec:
   ports:
     - port: 5678 # Default port for image
 ---
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: banana-app
   labels:
@@ -36,8 +36,8 @@ spec:
         - "-text=banana"
 
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: banana-service
 spec:
@@ -46,7 +46,7 @@ spec:
   ports:
     - port: 5678 # Default port for image
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: example-ingress
