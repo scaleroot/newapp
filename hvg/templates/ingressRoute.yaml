@@ -29,7 +29,7 @@ spec:
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/banana`)
     services:
-    - name: apple-service
+    - name: banana-service
       port: 5678
       scheme: http
   tls:
