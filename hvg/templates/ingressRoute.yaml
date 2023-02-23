@@ -13,16 +13,21 @@ spec:
     match: Host(`{{ .Values.ingressroute.host }}`)
     services:
     - name: {{ include "hello-kubernetes.name" . }}
-      port: 3030
-  - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
-    services:
-    - name: apple-service
       port: 3031
   - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/banana`)
+    match: Host(`{{ .Values.ingressroute.host }}`)
     services:
-    - name: banana-service
-      port: own
+    - name: {{ include "hello-kubernetes.name" . }}
+      port: 443
+#   - kind: Rule
+#     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
+#     services:
+#     - name: apple-service
+#       port: 3031
+#   - kind: Rule
+#     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/banana`)
+#     services:
+#     - name: banana-service
+#       port: own
   tls:
     secretName: {{ .Values.cert.secretname }}
