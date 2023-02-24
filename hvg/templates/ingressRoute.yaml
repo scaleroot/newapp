@@ -16,11 +16,11 @@ spec:
       port: 3031
 #     - name: {{ include "hello-kubernetes.name" . }}
 #       port: https
-  - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`)
-    services:
-    - name: {{ include "hello-kubernetes.name" . }}
-      port: 443
+#   - kind: Rule
+#     match: Host(`{{ .Values.ingressroute.host }}`)
+#     services:
+#     - name: {{ include "hello-kubernetes.name" . }}
+#       port: 443
 #   - kind: Rule
 #     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
 #     services:
