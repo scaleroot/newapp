@@ -15,7 +15,7 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
-    - port: 3032
+    - port: 3030
       targetPort: http
       protocol: TCP
       name: htt
