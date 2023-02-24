@@ -7,7 +7,6 @@ spec:
   entryPoints:
   - web
   - websecure
-  - hvg
   routes:
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`)
