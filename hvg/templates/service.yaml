@@ -12,7 +12,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: 3031
-      targetPort: 8080
+      targetPort: 3031
       protocol: TCP
       name: http
     - port: 443
