@@ -1,6 +1,6 @@
 # newapp
 
-## edit your traefik deployment for adding multiple ports 
+# edit your traefik deployment for adding multiple ports 
 ## command to edit traefik deployment
 ## kubectl edit deployment <your_traefik_deployment>
 
