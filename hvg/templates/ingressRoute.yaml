@@ -8,6 +8,7 @@ spec:
   - web
   - websecure
   - hvg
+  - myport
   routes:
   - kind: Rule
     match: Host(`{{ .Values.ingressroute.host }}`)
@@ -18,7 +19,7 @@ spec:
     match: Host(`{{ .Values.ingressroute.host }}`)
     services:
     - name: {{ include "hello-kubernetes.name" . }}
-      port: 3032
+      port: 3030
 #     - name: {{ include "hello-kubernetes.name" . }}
 #       port: https
 #   - kind: Rule
