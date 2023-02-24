@@ -35,16 +35,23 @@ Add your port in ingressRoute.yaml file
 ex:
 
 - kind: Rule
+
     match: Host(`<your_hostname>`)
+    
     services:
+    
     - name: <your_service_name>
+    
       port: <your_port>
       
 Add same port in service.yaml file also
  
  ex:  - port: <your_port>
+ 
         targetPort: <targetport> 
+        
         protocol: <protocol>
+        
         name: <name>
         
         
