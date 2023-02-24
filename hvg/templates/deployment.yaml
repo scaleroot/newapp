@@ -23,7 +23,7 @@ spec:
             - name: http
               containerPort: {{ .Values.deployment.container.port }}
               protocol: TCP
-            - name: htre
+            - name: hvg
               containerPort: 3031
               protocol: TCP
           livenessProbe:
