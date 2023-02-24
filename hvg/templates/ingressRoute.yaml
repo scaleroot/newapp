@@ -14,8 +14,8 @@ spec:
     services:
     - name: {{ include "hello-kubernetes.name" . }}
       port: hvg
-#     - name: {{ include "hello-kubernetes.name" . }}
-#       port: 443
+    - name: {{ include "hello-kubernetes.name" . }}
+      port: 443
 #   - kind: Rule
 #     match: Host(`{{ .Values.ingressroute.host }}`)
 #     services:
