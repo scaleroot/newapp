@@ -23,9 +23,9 @@ spec:
             - name: http
               containerPort: {{ .Values.deployment.container.port }}
               protocol: TCP
-            - name: hvg
-              containerPort: 3031
-              protocol: TCP
+#             - name: hvg
+#               containerPort: 3031
+#               protocol: TCP
           livenessProbe:
             httpGet:
               path: /
