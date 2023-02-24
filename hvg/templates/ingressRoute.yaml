@@ -9,11 +9,11 @@ spec:
   - websecure
   - hvg
   routes:
-  - kind: Rule
-    match: Host(`{{ .Values.ingressroute.host }}`)
-    services:
-    - name: {{ include "hello-kubernetes.name" . }}
-      port: 3031
+#   - kind: Rule
+#     match: Host(`{{ .Values.ingressroute.host }}`)
+#     services:
+#     - name: {{ include "hello-kubernetes.name" . }}
+#       port: 3031
 #     - name: {{ include "hello-kubernetes.name" . }}
 #       port: https
   - kind: Rule
