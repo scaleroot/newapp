@@ -46,7 +46,8 @@ ex:
       
 Add same port in service.yaml file also
  
- ex:  - port: <your_port>
+ ex: 
+      - port: <your_port>
  
         targetPort: <targetport> 
         
