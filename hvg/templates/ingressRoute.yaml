@@ -20,7 +20,7 @@ spec:
     match: Host(`{{ .Values.ingressroute.host }}`)
     services:
     - name: {{ include "hello-kubernetes.name" . }}
-      port: https
+      port: 443
 #   - kind: Rule
 #     match: Host(`{{ .Values.ingressroute.host }}`) && PathPrefix(`/apple`)
 #     services:
