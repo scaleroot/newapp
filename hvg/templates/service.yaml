@@ -11,10 +11,10 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-#     - port: 3031
-#       targetPort: http
-#       protocol: TCP
-#       name: http
+    - port: 3031
+      targetPort: http
+      protocol: TCP
+      name: http
     - port: 443
       targetPort: http
       protocol: TCP
