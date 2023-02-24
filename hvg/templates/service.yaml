@@ -15,6 +15,10 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    - port: 3032
+      targetPort: http
+      protocol: TCP
+      name: http
     - port: 443
       targetPort: http
       protocol: TCP
