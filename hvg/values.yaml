@@ -24,7 +24,7 @@ deployment:
   replicaCount: 2
   container:
     image:
-      repository: "public.ecr.aws/l0z3e7h5/test@sha256:24523e884b0f2f655955a63a15adaea7c3d7dcabdf474496837831e86a7472fe"
+      repository: "paulbouwer/hello-kubernetes"
       tag: "" # uses chart appVersion if not provided
       pullPolicy: IfNotPresent
     port: 8080
