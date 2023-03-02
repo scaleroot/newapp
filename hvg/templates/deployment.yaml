@@ -35,6 +35,12 @@ spec:
               path: /
               port: http
           env:
+          - name: JAEGER_AGENT_HOST
+            value: localhost
+          - name: JAEGER_AGENT_PORT
+            value: "6831"
+          - name: JAEGER_ENDPOINT
+            value: "http://k8s-jaeger-myjaeger-f523e0dab7-a6d843cc5fb9515c.elb.eu-west-1.amazonaws.com:14268/api/traces"
           {{- if ne (.Values.deployment.container.port | int) (8080 | int) }}
           - name: PORT
             value: "{{ .Values.deployment.container.port }}"
